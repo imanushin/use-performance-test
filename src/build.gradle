@@ -13,7 +13,12 @@ buildscript {
 }
 
 apply plugin: 'kotlin'
+apply plugin: 'application'
 apply plugin: "me.champeau.gradle.jmh"
+
+repositories {
+    mavenCentral()
+}
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
@@ -28,6 +33,17 @@ compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+
+mainClassName = "com.imanushin.use.performance.StartKt"
+
+task singleJar(type: Jar) {
+    manifest {
+        attributes(
+                "Main-Class": mainClassName
+        )
+    }
+    from { configurations.test.collect { it.isDirectory() ? it : zipTree(it) } } with jar
 }
 
 // there are several issues with JMH plugin:
