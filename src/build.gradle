@@ -1,17 +1,19 @@
 buildscript {
     repositories {
         mavenCentral()
+
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "me.champeau.gradle:jmh-gradle-plugin:$jmh_gradle_plugin_version"
     }
 }
 
 apply plugin: 'kotlin'
-
-repositories {
-    mavenCentral()
-}
+apply plugin: "me.champeau.gradle.jmh"
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
@@ -27,3 +29,12 @@ compileTestKotlin {
         jvmTarget = "1.8"
     }
 }
+
+// there are several issues with JMH plugin:
+// 1. gradle daemons should be stopped before, so execute .\gradlew.bat --stop before
+// 2. jmh plugin is unable to compile code incrementally, so execute .\gradlew.bat clean before
+// 3. jmh plugin has huge classpage, to change GRADLE_HOME folder to short path, like C:\g\
+jmh {
+    jmhVersion = jmh_version
+}
+
