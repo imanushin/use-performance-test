@@ -1,8 +1,8 @@
-package com.imanushin
+package com.imanushin.use.performance
 
 import java.io.Closeable
 
-fun executeNoInlineUse() {
+fun executeKotlinUse() {
     Closeable {}.use {}
     (0..10).forEach {
         executeUseMultiple(Math.pow(2.0, it.toDouble()).toInt())
@@ -18,7 +18,7 @@ private inline fun executeUseMultiple(executeUseTimes: Int) {
 
 @Suppress("NOTHING_TO_INLINE")
 private inline fun executeUse() {
-    EmptyAutocloseable.createNewCloseable().useNoInline {
+    EmptyAutocloseable.createNewCloseable().use {
         /*do nothing */
     }
 }

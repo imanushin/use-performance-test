@@ -1,4 +1,4 @@
-package com.imanushin
+package com.imanushin.use.performance
 
 class EmptyAutocloseable : AutoCloseable {
 

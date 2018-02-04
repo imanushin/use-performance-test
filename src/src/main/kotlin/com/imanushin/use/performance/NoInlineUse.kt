@@ -1,4 +1,4 @@
-package com.imanushin
+package com.imanushin.use.performance
 
 fun <T : AutoCloseable?, R> T.useNoInline(block: (T) -> R): R {
     var exception: Throwable? = null
