@@ -1,0 +1,25 @@
+Benchmark                                                  Mode      Cnt     Score    Error   Units
+CompareInlineUseVsLambdaUse.inlineUse                     thrpt      100     1.084 ▒  0.024  ops/us
+CompareInlineUseVsLambdaUse.lambdaUse                     thrpt      100     1.177 ▒  0.003  ops/us
+CompareInlineUseVsLambdaUse.inlineUse                      avgt      100     0.854 ▒  0.003   us/op
+CompareInlineUseVsLambdaUse.lambdaUse                      avgt      100     0.849 ▒  0.003   us/op
+CompareInlineUseVsLambdaUse.inlineUse                    sample  3437529     0.946 ▒  0.003   us/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.00    sample              0.584            us/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.50    sample              0.877            us/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.90    sample              1.168            us/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.95    sample              1.460            us/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.99    sample              1.462            us/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.999   sample             13.728            us/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.9999  sample             57.856            us/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p1.00    sample           1224.704            us/op
+CompareInlineUseVsLambdaUse.lambdaUse                    sample  3223463     1.004 ▒  0.002   us/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.00    sample              0.584            us/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.50    sample              0.877            us/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.90    sample              1.460            us/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.95    sample              1.460            us/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.99    sample              1.462            us/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.999   sample             13.728            us/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.9999  sample             55.697            us/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p1.00    sample            676.864            us/op
+CompareInlineUseVsLambdaUse.inlineUse                        ss      100   191.006 ▒ 13.818   us/op
+CompareInlineUseVsLambdaUse.lambdaUse                        ss      100   190.863 ▒ 14.087   us/op
