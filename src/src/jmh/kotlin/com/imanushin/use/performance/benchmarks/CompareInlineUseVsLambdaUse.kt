@@ -8,8 +8,8 @@ import org.openjdk.jmh.annotations.*
 
 @BenchmarkMode(Mode.Throughput, Mode.AverageTime, Mode.SampleTime, Mode.SingleShotTime)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
-@Warmup(iterations = 1)
-@Measurement(iterations = 10)
+@Warmup(iterations = 20)
+@Measurement(iterations = 300)
 open class CompareInlineUseVsLambdaUse {
 
     @Benchmark
