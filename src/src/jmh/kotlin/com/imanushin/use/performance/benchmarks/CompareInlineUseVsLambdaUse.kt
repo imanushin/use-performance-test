@@ -1,10 +1,10 @@
 package com.imanushin.use.performance.benchmarks
 
-import com.imanushin.use.performance.executeKotlinUse
-import com.imanushin.use.performance.executeNoInlineUse
+import com.imanushin.use.performance.useNoInline
 import java.util.concurrent.TimeUnit
 
 import org.openjdk.jmh.annotations.*
+import org.openjdk.jmh.infra.Blackhole
 
 @BenchmarkMode(Mode.All)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
@@ -13,12 +13,16 @@ import org.openjdk.jmh.annotations.*
 open class CompareInlineUseVsLambdaUse {
 
     @Benchmark
-    fun inlineUse() {
-        executeKotlinUse()
+    fun inlineUse(blackhole: Blackhole) {
+        NoopAutoCloseable(blackhole).use {
+            blackhole.consume(1)
+        }
     }
 
     @Benchmark
-    fun lambdaUse() {
-        executeNoInlineUse()
+    fun lambdaUse(blackhole: Blackhole) {
+        NoopAutoCloseable(blackhole).useNoInline {
+            blackhole.consume(1)
+        }
     }
 }
