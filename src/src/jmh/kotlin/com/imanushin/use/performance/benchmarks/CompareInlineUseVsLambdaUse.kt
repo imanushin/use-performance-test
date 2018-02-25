@@ -7,9 +7,8 @@ import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.Blackhole
 
 @BenchmarkMode(Mode.All)
-@OutputTimeUnit(TimeUnit.MICROSECONDS)
 @Warmup(iterations = 10)
-@Measurement(iterations = 100)
+@Measurement(iterations = 100, batchSize = 10)
 open class CompareInlineUseVsLambdaUse {
 
     @Benchmark
