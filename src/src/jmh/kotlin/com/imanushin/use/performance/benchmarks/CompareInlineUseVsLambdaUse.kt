@@ -1,8 +1,6 @@
 package com.imanushin.use.performance.benchmarks
 
 import com.imanushin.use.performance.useNoInline
-import java.util.concurrent.TimeUnit
-
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.infra.Blackhole
 

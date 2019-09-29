@@ -8,7 +8,7 @@ val applicationStartClass = "com.imanushin.use.performance.StartKt"
 plugins {
     application
     kotlin("jvm") version "1.3.50"
-    id("me.champeau.gradle.jmh") version "0.4.8"
+    id("me.champeau.gradle.jmh") version "0.5.0-rc-2"
 }
 
 repositories {
