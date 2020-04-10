@@ -1,0 +1,25 @@
+Benchmark                                                  Mode      Cnt          Score        Error  Units
+CompareInlineUseVsLambdaUse.inlineUse                     thrpt       25  213820227.482 ▒ 341224.467  ops/s
+CompareInlineUseVsLambdaUse.lambdaUse                     thrpt       25  213742457.664 ▒ 328578.425  ops/s
+CompareInlineUseVsLambdaUse.inlineUse                      avgt       25         ? 10??                s/op
+CompareInlineUseVsLambdaUse.lambdaUse                      avgt       25         ? 10??                s/op
+CompareInlineUseVsLambdaUse.inlineUse                    sample  6951494         ? 10??                s/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.00    sample                     ? 0                s/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.50    sample                     ? 0                s/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.90    sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.95    sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.99    sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.999   sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p0.9999  sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.inlineUse:inlineUse╖p1.00    sample                   0.001                s/op
+CompareInlineUseVsLambdaUse.lambdaUse                    sample  6266081         ? 10??                s/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.00    sample                     ? 0                s/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.50    sample                     ? 0                s/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.90    sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.95    sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.99    sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.999   sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p0.9999  sample                  ? 10??                s/op
+CompareInlineUseVsLambdaUse.lambdaUse:lambdaUse╖p1.00    sample                   0.001                s/op
+CompareInlineUseVsLambdaUse.inlineUse                        ss        5          0.002 ▒      0.001   s/op
+CompareInlineUseVsLambdaUse.lambdaUse                        ss        5          0.003 ▒      0.001   s/op
