@@ -6,8 +6,8 @@ val jmhLibraryVersion = "1.23"
 val applicationStartClass = "com.imanushin.use.performance.StartKt"
 
 plugins {
-    application
-    kotlin("jvm") version "1.3.71"
+    java
+    kotlin("jvm") version embeddedKotlinVersion
     id("me.champeau.gradle.jmh") version "0.5.0"
 }
 
@@ -29,10 +29,6 @@ tasks {
             attributes("Main-Class" to applicationStartClass)
         }
     }
-}
-
-application {
-    mainClassName = applicationStartClass
 }
 
 // there are several issues with JMH plugin on Windows (it doesn't have fork method, so jmh tries to simulates that):
