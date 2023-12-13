@@ -5,7 +5,7 @@ val applicationStartClass = "com.imanushin.use.performance.StartKt"
 plugins {
     java
     kotlin("jvm") version embeddedKotlinVersion
-    alias(libs.plugins.me.champeau.gradle.jmh)
+    alias(libs.plugins.me.champeau.jmh)
     alias(libs.plugins.com.github.ben.manes.versions)
 }
 
