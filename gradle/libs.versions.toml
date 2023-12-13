@@ -1,0 +1,8 @@
+[versions]
+jmh = "1.23"
+
+[libraries]
+
+[plugins]
+me-champeau-gradle-jmh = { id = "me.champeau.gradle.jmh", version = "0.5.3" }
+com-github-ben-manes-versions = { id = "com.github.ben-manes.versions", version = "0.50.0" }
