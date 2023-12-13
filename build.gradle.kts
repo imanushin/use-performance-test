@@ -1,7 +1,5 @@
 import org.gradle.jvm.tasks.Jar
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val kotlinJvmTarget = "13"
 val jmhLibraryVersion = "1.23"
 val applicationStartClass = "com.imanushin.use.performance.StartKt"
 
@@ -10,6 +8,10 @@ plugins {
     kotlin("jvm") version embeddedKotlinVersion
     id("me.champeau.gradle.jmh") version "0.5.3"
     id("com.github.ben-manes.versions") version "0.50.0"
+}
+
+kotlin {
+    jvmToolchain(11)
 }
 
 repositories {
@@ -21,10 +23,6 @@ dependencies {
 }
 
 tasks {
-    withType<KotlinCompile> {
-        kotlinOptions.jvmTarget = kotlinJvmTarget
-    }
-
     create<Jar>("singleJar") {
         manifest {
             attributes("Main-Class" to applicationStartClass)
