@@ -1,7 +1,5 @@
 import org.gradle.jvm.tasks.Jar
 
-val applicationStartClass = "com.imanushin.use.performance.StartKt"
-
 plugins {
     java
     kotlin("jvm") version embeddedKotlinVersion
@@ -18,15 +16,7 @@ repositories {
 }
 
 dependencies {
-    api(kotlin("stdlib-jdk8"))
-}
-
-tasks {
-    create<Jar>("singleJar") {
-        manifest {
-            attributes("Main-Class" to "com.imanushin.use.performance.StartKt")
-        }
-    }
+    api(kotlin("stdlib"))
 }
 
 // there are several issues with JMH plugin on Windows (it doesn't have fork method, so jmh tries to simulates that):
