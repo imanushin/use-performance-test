@@ -1,13 +1,12 @@
 import org.gradle.jvm.tasks.Jar
 
-val jmhLibraryVersion = "1.23"
 val applicationStartClass = "com.imanushin.use.performance.StartKt"
 
 plugins {
     java
     kotlin("jvm") version embeddedKotlinVersion
-    id("me.champeau.gradle.jmh") version "0.5.3"
-    id("com.github.ben-manes.versions") version "0.50.0"
+    alias(libs.plugins.me.champeau.gradle.jmh)
+    alias(libs.plugins.com.github.ben.manes.versions)
 }
 
 kotlin {
@@ -25,7 +24,7 @@ dependencies {
 tasks {
     create<Jar>("singleJar") {
         manifest {
-            attributes("Main-Class" to applicationStartClass)
+            attributes("Main-Class" to "com.imanushin.use.performance.StartKt")
         }
     }
 }
@@ -35,5 +34,5 @@ tasks {
 // 2. jmh plugin is unable to compile code incrementally, so execute .\gradlew.bat clean before
 // 3. jmh plugin has huge classpath, to change GRADLE_HOME folder to short path, like C:\g\
 jmh {
-    jmhVersion = jmhLibraryVersion
+    jmhVersion = libs.versions.jmh.get()
 }
