@@ -27,7 +27,7 @@ jobs:
 
       # https://github.com/marketplace/actions/gradle-wrapper-validation
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@v1
+        uses: gradle/wrapper-validation-action@v2
 
       # https://github.com/marketplace/actions/gradle-build-action
       - name: Build with Gradle
