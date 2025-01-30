@@ -4,5 +4,5 @@ jmh = "1.37"
 [libraries]
 
 [plugins]
-me-champeau-jmh = { id = "me.champeau.jmh", version = "0.7.2" }
+me-champeau-jmh = { id = "me.champeau.jmh", version = "0.7.3" }
 com-github-ben-manes-versions = { id = "com.github.ben-manes.versions", version = "0.51.0" }
